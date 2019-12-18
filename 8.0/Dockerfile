@@ -73,3 +73,5 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 3306 33060
 CMD ["mysqld"]
+
+RUN apt-get update && apt-get install -y --no-install-recommends strace && rm -rf /var/lib/apt/lists/*
